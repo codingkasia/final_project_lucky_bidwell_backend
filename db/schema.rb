@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(version: 2018_07_23_162430) do
   create_table "guesses", force: :cascade do |t|
     t.integer "value"
     t.string "color"
+    t.integer "lucky"
     t.bigint "room_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
