@@ -1,4 +1,5 @@
 class GuessesController < ApplicationController
+  
     def create
     guess = Guess.new(guess_params)
     room = Room.find(guess_params[:room_id])
@@ -14,6 +15,6 @@ class GuessesController < ApplicationController
   private
   
   def guess_params
-    params.require(:guess).permit(:value, :room_id, :color, :lucky)
+    params.require(:guess).permit(:value, :room_id, :user_id, :color, :lucky)
   end
 end
