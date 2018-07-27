@@ -8,4 +8,5 @@
 
 User.create(name: "foo", password: "pass", email: 'foo@example.com')
 User.create(name: "bob", password: "pass", email: 'bob@example.com')
+Room.create(name: "lucky", activeUser: "")  
 
