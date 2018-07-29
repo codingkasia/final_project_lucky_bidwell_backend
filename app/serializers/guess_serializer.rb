@@ -1,3 +1,3 @@
 class GuessSerializer < ActiveModel::Serializer
-  attributes :id, :room_id, :value, :color, :lucky, :user_ids, :found
+  attributes :id, :room_id, :value, :bgColor, :lucky, :user_ids, :found
 end

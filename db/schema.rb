@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(version: 2018_07_27_155416) do
   create_table "guesses", force: :cascade do |t|
     t.integer "value"
     t.integer "room_id"
-    t.string "color"
+    t.string "bgColor"
     t.integer "lucky"
     t.boolean "found"
     t.datetime "created_at", null: false
