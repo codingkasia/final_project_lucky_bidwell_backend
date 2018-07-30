@@ -5,7 +5,8 @@ class CreateGuesses < ActiveRecord::Migration[5.2]
       t.integer :room_id
       t.string :bgColor
       t.integer :lucky
-      t.boolean :found  
+      t.boolean :found 
+      t.integer :temp 
       t.timestamps
     end
   end

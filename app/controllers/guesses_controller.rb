@@ -1,9 +1,13 @@
 class GuessesController < ApplicationController
   
     def create
+
+    # #points
+    # points = Point.create(point_params)
       
     # guess = Guess.new(guess_params)
     guess = Guess.create(guess_params)
+
     user_guess = UserGuess.create(guess: guess, user: User.find(params[:user_id][0]))
     # guess.users = User.find() 
     # //user?
@@ -18,9 +22,13 @@ class GuessesController < ApplicationController
   end
   
   private
-  
+  def point_params
+    params.require(:point).permit(:points, :user_id)
+  end
+
+
   def guess_params
-    params.require(:guess).permit(:value, :room_id, :bgColor, :lucky, :user_id)
+    params.require(:guess).permit(:value, :room_id, :bgColor, :lucky, :user_id, :temp)
   end
 end
 # def edit 

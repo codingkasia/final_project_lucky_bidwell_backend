@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 2018_07_30_014104) do
     t.string "bgColor"
     t.integer "lucky"
     t.boolean "found"
+    t.integer "temp"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
