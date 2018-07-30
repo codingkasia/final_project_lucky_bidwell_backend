@@ -23,3 +23,16 @@ class GuessesController < ApplicationController
     params.require(:guess).permit(:value, :room_id, :bgColor, :lucky, :user_id)
   end
 end
+# def edit 
+    #   guess = Guess.find(guess_params)
+    # user_guess = UserGuess.find(guess: guess, user: User.find(params[:user_id][0]))
+    # # guess.users = User.find() 
+    # # //user?
+    # room = Room.find(guess_params[:room_id])
+    # if guess.save
+    #   serialized_data = ActiveModelSerializers::Adapter::Json.new(
+    #     GuessSerializer.new(guess)
+    #   ).serializable_hash
+    #   GuessesChannel.broadcast_to room, serialized_data
+    #   head :ok
+    # end

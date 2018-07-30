@@ -8,5 +8,5 @@
 
 User.create(name: "p1", password: "pass", email: 'foo@example.com')
 User.create(name: "p2", password: "pass", email: 'bob@example.com')
-# Room.create(name: "lucky", activeUser: "")  
+
 
