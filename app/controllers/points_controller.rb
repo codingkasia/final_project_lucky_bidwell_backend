@@ -11,10 +11,7 @@ class PointsController < ApplicationController
    
     end
 
-    def destroy 
-      Points.destroy(params[:id])
-    end
-
+    
     def update 
       point = Point.find(params[:id])
       point.update_attributes(point_params)

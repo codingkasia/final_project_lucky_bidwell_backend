@@ -25,7 +25,7 @@ Rails.application.routes.draw do
   resources :rooms, only: [:index, :create]
   resources :guesses, only: [:create]
   resources :user_guesses, only: [:index]
-  resources :points, only: [:index, :create, :update, :destroy]
+  resources :points, only: [:index, :create, :update]
   mount ActionCable.server => '/cable'
 
 end
