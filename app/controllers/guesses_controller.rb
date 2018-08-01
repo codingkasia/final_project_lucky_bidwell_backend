@@ -1,10 +1,12 @@
 class GuessesController < ApplicationController
-  
-    def create
 
-    # #points
-    # points = Point.create(point_params)
-      
+
+  def index 
+    guesses = Guess.all 
+    render json: guesses
+  end
+  
+    def create      
     # guess = Guess.new(guess_params)
     guess = Guess.create(guess_params)
 
@@ -22,18 +24,18 @@ class GuessesController < ApplicationController
     
   end
 
-  def update 
-    g = Guess.find(params[:id])
-    g.update(bgColor: "orange")
-  end
+  # def update 
+  #   g = Guess.find(params[:id])
+  #   g.update(bgColor: "orange")
+  # end
 
   end
   
   private
-      def point_params
-        params.require(:point).permit(:points, :user_id)
-      end
-
+    
+      # def guess_params
+      #   params.require(:guess).permit(:value, :room_id, :user_id)
+      # end
 
       def guess_params
         params.require(:guess).permit(:value, :room_id, :bgColor, :lucky, :user_id, :temp)
