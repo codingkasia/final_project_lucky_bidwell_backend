@@ -26,6 +26,7 @@ Rails.application.routes.draw do
   resources :guesses, only: [:index, :create, :update]
   resources :user_guesses, only: [:index]
   resources :points, only: [:index, :create, :update]
+  resources :scores, only: [:index, :create, :update]
   mount ActionCable.server => '/cable'
 
 end

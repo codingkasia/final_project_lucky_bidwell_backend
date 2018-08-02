@@ -13,6 +13,7 @@ User.create(name: "Bob", password: "pass", email: 'bob@example.com')
 Point.create(user_id: 1, points: 0)
 Point.create(user_id: 2, points: 0)
 Guess.create(value: 0, room_id: 1)
+Score.create(sumPoints: 0, room_id: 1)
 Room.create(name: "Lucky Bidwell", activeUser: nil)
 
 
