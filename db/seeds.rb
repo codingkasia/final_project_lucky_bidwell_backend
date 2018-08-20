@@ -15,5 +15,6 @@ Point.create(user_id: 2, points: 0)
 Guess.create(value: 0, room_id: 1)
 Score.create(sumPoints: 0, room_id: 1)
 Room.create(name: "Lucky Bidwell", activeUser: nil)
+Number.create(number: 1, room_id: 1)
 
 

@@ -10,13 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_02_044351) do
+ActiveRecord::Schema.define(version: 2018_08_02_182520) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "guesses", force: :cascade do |t|
     t.integer "value"
+    t.integer "room_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "numbers", force: :cascade do |t|
+    t.integer "number"
     t.integer "room_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
