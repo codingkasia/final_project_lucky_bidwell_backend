@@ -6,11 +6,10 @@ class PointsController < ApplicationController
     end
   
     def create
-        point = Point.create(point_params)
-        render json: point
-   
+         
+    # guess = Guess.new(guess_params)
+    guess = Guess.create(guess_params)
     end
-
     
     def update 
       point = Point.find(params[:id])
