@@ -94,6 +94,6 @@ config.action_cable.allowed_request_origins = ['https://lucky_bidwell_backend.he
 # config.action_cable.allowed_request_origins = ['https://quantum-dog.herokuapp.com', 'http://quantum-dog.herokuapp.com']
   
 # 3. remove "invalid host header"
-HOST="https://quantum-dog.herokuapp.com/"
+HOST=lucky_bidwell_backend.herokuapp.com
 
 end
