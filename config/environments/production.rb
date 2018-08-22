@@ -82,4 +82,16 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+
+  # heroku setup
+  # 1. configure action cable's production URI
+
+config.web_socket_server_url = "wss://lucky_bidwell_backend.herokuapp.com/cable"
+
+# 2. allow request origins
+config.action_cable.allowed_request_origins = ['https://lucky_bidwell_backend.herokuapp.com', 'http://lucky_bidwell_backend.herokuapp.com']
+  
+# 3. remove "invalid host header"
+HOST="quantum-dog.herokuapp.com"
+
 end
