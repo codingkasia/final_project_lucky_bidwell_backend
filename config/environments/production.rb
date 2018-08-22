@@ -23,7 +23,7 @@ Rails.application.configure do
   config.public_file_server.enabled = ENV['RAILS_SERVE_STATIC_FILES'].present?
 
   # Enable serving of images, stylesheets, and JavaScripts from an asset server.
-  # config.action_controller.asset_host = 'http://assets.example.com'
+  config.action_controller.asset_host = 'https://lucky_bidwell_backend.herokuapp.com'
 
   # Specifies the header that your server uses for sending files.
   # config.action_dispatch.x_sendfile_header = 'X-Sendfile' # for Apache
@@ -94,6 +94,6 @@ config.action_cable.allowed_request_origins = ['https://lucky_bidwell_backend.he
 # config.action_cable.allowed_request_origins = ['https://quantum-dog.herokuapp.com', 'http://quantum-dog.herokuapp.com']
   
 # 3. remove "invalid host header"
-HOST=lucky_bidwell_backend.herokuapp.com
+HOST="https://quantum-dog.herokuapp.com/"
 
 end
