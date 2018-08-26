@@ -99,10 +99,6 @@ config.web_socket_server_url = "wss://lucky_bidwell_backend.herokuapp.com/cable"
 # 2. allow request origins
 config.action_cable.allowed_request_origins = ['https://lucky_bidwell_backend.herokuapp.com', 'http://lucky_bidwell_backend.herokuapp.com']
 # config.action_cable.allowed_request_origins = ['https://quantum-dog.herokuapp.com', 'http://quantum-dog.herokuapp.com']
-  
-# # 3. remove "invalid host header"
-HOST=lucky_bidwell_backend.herokuapp.com
-
 
 
 end

@@ -78,11 +78,13 @@ test:
 #   production:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
-production:
-  <<: *default
-  database: lucky_bidwell_backend_production
-  username: lucky_bidwell_backend
-  password: <%= ENV['LUCKY_BIDWELL_BACKEND_DATABASE_PASSWORD'] %>
 # production:
-# adapter: postgres
-# url: <%= ENV['DATABASE_URL'] %>
+#   <<: *default
+#   database: lucky_bidwell_backend_production
+#   username: lucky_bidwell_backend
+#   password: <%= ENV['LUCKY_BIDWELL_BACKEND_DATABASE_PASSWORD'] %>
+
+
+production:
+adapter: postgres
+url: <%= ENV['DATABASE_URL'] %>
