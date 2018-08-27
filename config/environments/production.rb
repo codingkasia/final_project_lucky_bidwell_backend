@@ -87,18 +87,29 @@ if ENV["RAILS_LOG_TO_STDOUT"].present?
   config.logger = ActiveSupport::TaggedLogging.new(logger)
 end
 
+
+
+
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 
   # heroku setup
   # 1. configure action cable's production URI
 
-config.web_socket_server_url = "wss://lucky_bidwell_backend.herokuapp.com/cable"
+# secured version
 # config.web_socket_server_url = "wss://quantum-dog.herokuapp.com/cable"
-
+# non-secured version
+config.action_cable.url = 'ws://quantum-dog.herokuapp.com/cable'
 # 2. allow request origins
-config.action_cable.allowed_request_origins = ['https://lucky_bidwell_backend.herokuapp.com', 'http://lucky_bidwell_backend.herokuapp.com']
+# secured and non-secured version
+# config.action_cable.allowed_request_origins = ['https://lucky_bidwell_backend.herokuapp.com', 'http://lucky_bidwell_backend.herokuapp.com']
+# non -secured
+config.action_cable.allowed_request_origins = ['http://lucky_bidwell_backend.herokuapp.com']
 # config.action_cable.allowed_request_origins = ['https://quantum-dog.herokuapp.com', 'http://quantum-dog.herokuapp.com']
+  
+# # 3. remove "invalid host header"
+
+
 
 
 end

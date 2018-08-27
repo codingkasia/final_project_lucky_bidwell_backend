@@ -87,4 +87,5 @@ test:
 
 production:
 adapter: postgres
+database: lucky_bidwell_backend_production
 url: <%= ENV['DATABASE_URL'] %>
