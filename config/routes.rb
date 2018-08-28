@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  mount ActionCable.server => '/cable'
+  
   #routes for login
   post 'login', to: 'auth#login'
   get '/user', to: 'users#show_user'
@@ -12,6 +12,6 @@ Rails.application.routes.draw do
   resources :points, only: [:index, :create, :update]
   resources :scores, only: [:index, :create, :update]
   resources :numbers, only: [:index, :crete, :update]
-  
+  mount ActionCable.server => '/cable'
 
 end
