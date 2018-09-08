@@ -87,7 +87,10 @@ if ENV["RAILS_LOG_TO_STDOUT"].present?
   config.logger = ActiveSupport::TaggedLogging.new(logger)
 end
 
-
+config.public_file_server.headers = {
+  'Access-Control-Allow-Origin' => '*',  # only for debugging
+  'Access-Control-Request-Method' => %w{GET OPTIONS}.join(",")
+}  
 
 
   # Do not dump schema after migrations.
@@ -105,8 +108,7 @@ config.action_cable.url = 'wss://lucky_bidwell_backend.herokuapp.com/cable'
 # config.action_cable.allowed_request_origins = ['https://lucky_bidwell_backend.herokuapp.com', 'http://lucky_bidwell_backend.herokuapp.com']
 # non -secured
 # config.action_cable.allowed_request_origins = ['http://lucky_bidwell_backend.herokuapp.com']
-config.action_cable.allowed_request_origins = ["https://lucky_bidwell_backend.herokuapp.com"];
-  
+
 # # 3. remove "invalid host header"
 
 
