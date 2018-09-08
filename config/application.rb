@@ -33,3 +33,10 @@ module LuckyBidwellBackend
     config.api_only = true
   end
 end
+
+config.middleware.insert_before 0, "Rack::Cors" do
+  allow do
+    origins '*'
+    resource '*', :headers => :any, :methods => [:get, :post, :options, :delete, :put, :patch], credentials: true
+  end
+end
