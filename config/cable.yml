@@ -1,26 +1,30 @@
 # Action cable uses redis to administer connections,
-production:
-  url: redis://:c1J10qRijvXmelFNchsmShs7FwCwXvJA@redis-15767.c15.us-east-1-4.ec2.cloud.redislabs.com:15767
-development:
-url: redis://localhost:6379/2
-
-test:
-  url: redis://localhost:6379/3
-
+######################current##############
+# production:
+#   url: redis://:c1J10qRijvXmelFNchsmShs7FwCwXvJA@redis-15767.c15.us-east-1-4.ec2.cloud.redislabs.com:15767
 # development:
-#   adapter: async
+# url: redis://localhost:6379/2
 
 # test:
-#   adapter: async
+#   url: redis://localhost:6379/3
 
-# production:
-#   adapter: redis
-#   url: redis://redistogo:4010d7cae0946d8bcbc5ca2a2bfbff8c@spinyfin.redistogo.com:9396
-#   # url: <%= ENV.fetch("REDIS_URL") { "redis://localhost:6379/1" } %>
+########################OLD#####################
 
-#   # inline: true
-#   # # redis://localhost:6379/1
-#   # password: 
+development:
+  adapter: async
+
+test:
+  adapter: async
+
+production:
+  adapter: redis
+  url: redis://redistogo:4010d7cae0946d8bcbc5ca2a2bfbff8c@spinyfin.redistogo.com:9396
+  # url: <%= ENV.fetch("REDIS_URL") { "redis://localhost:6379/1" } %>
+
+  # inline: true
+  # # redis://localhost:6379/1
+  # password: 
+########################################
 
 # development:
 #   adapter: async
